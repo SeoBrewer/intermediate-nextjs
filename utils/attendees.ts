@@ -7,7 +7,7 @@ import { attendees, events, rsvps } from '@/db/schema'
 import { eq, sql } from 'drizzle-orm'
 import { delay } from './delay'
 
-export const getAttendeesCountForDashboard = async () => {
+export const getAttendeesCountForDashboard = async (userId: string) => {
   await delay()
   const counts = await db
     .select({
