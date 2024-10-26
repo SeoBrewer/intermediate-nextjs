@@ -17,6 +17,6 @@ export const createNewEvent = async () => {
     isPrivate: false,
     name: randomName('event', ' '),
   })
-
+  revalidateTag('events')
   revalidateTag('dashboard:events')
 }
