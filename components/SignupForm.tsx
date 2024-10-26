@@ -6,13 +6,13 @@ import Link from 'next/link'
 import { useFormState } from 'react-dom'
 import SubmitButton from './SubmitButton'
 
-const initState = { messge: null }
+const initState = { message: null }
 
 const SignupForm = () => {
-  const [formState, action] = useFormState<{ message: string | null }>(
-    registerUser,
-    initState
-  )
+  const [formState, action] = useFormState<
+    { message: string | null },
+    FormData
+  >(registerUser, initState)
   return (
     <form
       action={action}

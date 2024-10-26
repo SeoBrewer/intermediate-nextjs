@@ -3,7 +3,15 @@
 import Shell from '@/components/Shell'
 import { usePathname } from 'next/navigation'
 
-const Dashboard = ({ children, events, rsvps }) => {
+import { ReactNode } from 'react'
+
+interface DashboardProps {
+  children: ReactNode
+  events: ReactNode
+  rsvps: ReactNode
+}
+
+const Dashboard = ({ children, events, rsvps }: DashboardProps) => {
   const path = usePathname()
   return (
     <Shell>

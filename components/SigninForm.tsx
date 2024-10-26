@@ -5,7 +5,7 @@ import SubmitButton from './SubmitButton'
 import { signinUser } from '@/actions/auth'
 import { useFormState } from 'react-dom'
 
-const initState = { message: null }
+const initState = { message: '' }
 
 const SigninForm = () => {
   const [formState, action] = useFormState(signinUser, initState)
